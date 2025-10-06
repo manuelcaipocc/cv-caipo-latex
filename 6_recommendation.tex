@@ -1,0 +1,38 @@
+% Longitudes (si no están ya definidas)
+\newlength{\RefDate}
+\newlength{\RefDesc}
+\newlength{\RefCert}
+
+\setlength{\RefDate}{1.4cm}   % columna fecha
+\setlength{\RefCert}{0.4cm}   % columna certificado [Z]
+\setlength{\RefDesc}{\dimexpr(\textwidth - \RefDate - \RefCert - 1.5em)\relax}
+
+\noindent
+\begin{tabular}{@{}%
+  >{\raggedleft\arraybackslash}m{\RefDate}%
+  @{\hspace{0.4em}}%
+  >{\RaggedRight\arraybackslash}m{\RefDesc}%
+  @{\hspace{0.4em}}%
+  >{\centering\arraybackslash}m{\RefCert}@{}}
+
+% Ref 1 — PhD Recommendation
+\footnotesize 2025 & 
+\footnotesize \textbf{Prof. Dr.-Ing. G. Ketterer}, Hochschule Furtwangen, Studiendekan M.Sc. \emph{Advanced Precision Engineering}.  
+Empfehlung für Promotion. & 
+\cert{https://link-ketterer-ref} \\[0.2em]
+
+% Ref 2 — Career/Advanced Studies
+\footnotesize 2023 & 
+\footnotesize \textbf{T. Gaddie}, Freeport-McMoRan ,Data Scientist III, Metals Optimization.  
+Referenz für Karriere \& weiterführende Studien. & 
+\cert{https://www.fcx.com/} \\[0.2em]
+
+% Ref 3 — Master Recommendation
+\footnotesize 2021 & 
+\footnotesize \textbf{Dr. L. Rodríguez B.}, UNSA , Direktor Maschinenbau \& Betreuer Bachelorarbeit.  
+Empfehlung für Masterstudium. & 
+\cert{https://link-rodriguez-ref} \\[0.2em]
+
+
+\multicolumn{3}{@{}r@{}}{\tiny \textcolor{linksoft}{\textit{Hinweis:} \tiny[Z] Empfehlungsschreiben / Referenzbrief}} \\
+\end{tabular}

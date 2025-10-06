@@ -1,0 +1,27 @@
+% Longitudes (si no están ya definidas)
+\newlength{\RefDatea}
+\newlength{\RefDesca}
+\newlength{\RefCerta}
+
+\setlength{\RefDatea}{1.4cm}   % columna fecha
+\setlength{\RefCerta}{0.4cm}   % columna certificado [Z]
+\setlength{\RefDesca}{\dimexpr(\textwidth - \RefDate - \RefCert - 1.5em)\relax}
+
+\noindent
+\begin{tabular}{@{}%
+  >{\raggedleft\arraybackslash}m{\RefDate}%
+  @{\hspace{0.4em}}%
+  >{\RaggedRight\arraybackslash}m{\RefDesc}%
+  @{\hspace{0.4em}}%
+  >{\centering\arraybackslash}m{\RefCert}@{}}
+
+% Stipendium 1 — Bachelor
+\footnotesize 2017–2019 & 
+\footnotesize \textbf{Beca Presidente de la República – Perú}.  
+Vollstipendium für akademische Exzellenz (Top 1\%). & \\[0.2em]
+
+% Stipendium 2 — SERESSA
+\footnotesize 2019 & 
+\footnotesize \textbf{Forschungsstipendium – SERESSA 2019}, Spanien.  
+15th International School on Radiation Effects. & 
+\end{tabular}

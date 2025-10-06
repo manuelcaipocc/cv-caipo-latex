@@ -1,0 +1,61 @@
+% ===== Definición de longitudes personalizadas =====
+\newlength{\Ai}  % Fecha columna 1
+\newlength{\Bi}  % Curso columna 2  
+\newlength{\Ci}  % Certificado columna 3
+\newlength{\Aii} % Fecha columna 4
+\newlength{\Bii} % Curso columna 5
+\newlength{\Cii} % Certificado columna 6
+
+% REDUCIR MÁS LAS COLUMNAS NO ESENCIALES Y MAXIMIZAR ESPACIO PARA CURSOS
+\setlength{\Ai}{0.8cm}   % REDUCIDO: Ancho de columna fecha
+\setlength{\Ci}{0.3cm}   % REDUCIDO: Ancho de columna certificado
+\setlength{\Bi}{\dimexpr(0.5\textwidth - \Ai - \Ci - 1.5em)\relax}  % AUMENTADO: Ancho del curso
+\setlength{\Aii}{\Ai}
+\setlength{\Cii}{\Ci} 
+\setlength{\Bii}{\Bi}
+
+
+
+% ===== Tabla de cursos adicionales =====
+\noindent
+\begin{tabular}{@{}%
+  >{\raggedleft\arraybackslash}m{\Ai}%
+  @{\hspace{0.3em}}%  % REDUCIDO
+  >{\RaggedRight\arraybackslash}m{\Bi}%
+  @{\hspace{0.3em}}%  % REDUCIDO
+  >{\centering\arraybackslash}m{\Ci}%
+  @{\hspace{0.6em}}%  % REDUCIDO (espacio entre mitades)
+  >{\raggedleft\arraybackslash}m{\Aii}%
+  @{\hspace{0.3em}}%  % REDUCIDO
+  >{\RaggedRight\arraybackslash}m{\Bii}%
+  @{\hspace{0.3em}}%  % REDUCIDO
+  >{\centering\arraybackslash}m{\Cii}%
+  @{}}
+
+% Primera fila - REDUCIDO ESPACIO VERTICAL
+\footnotesize 2024 & \footnotesize Deutschkurse B1, B2, C1 (\inst{https://www.vh-ulm.de/}{Ulm vhs} \& \inst{https://www.berlitz.de}{Berlitz}) & \cert{https://example.com/zertifikat} &
+\footnotesize 2020 & \footnotesize Struktur- \& Mehrphysik-Strömungsanalyse mit FEM (\inst{https://www.esss.co}{ESSS}) & \cert{https://example.com/zertifikat} \\[0.01em] % REDUCIDO
+
+% Segunda fila - REDUCIDO ESPACIO VERTICAL
+\footnotesize 2022 & \footnotesize Führung und Soft Skills (\inst{https://www.ucsp.edu.pe}{UCSP}) & \cert{https://example.com/zertifikat} &
+\footnotesize 2019 & \footnotesize Industrial Plant Systems (\inst{https://www.tecsup.edu.pe}{TECSUP}) & \cert{https://example.com/zertifikat} \\[0.05em] % REDUCIDO
+
+% Tercera fila - REDUCIDO ESPACIO VERTICAL
+\footnotesize 2022 & \footnotesize SQL (\inst{https://www.newhorizons.com}{New Horizons}) & \cert{https://example.com/zertifikat} &
+\footnotesize 2019 & \footnotesize Autodesk Nastran – FEM \& CFD (\inst{https://www.autodesk.com/de}{Autodesk}) & \cert{https://example.com/zertifikat} \\[0.05em] % REDUCIDO
+
+% Cuarta fila - REDUCIDO ESPACIO VERTICAL
+\footnotesize 2021 & \footnotesize Python für Data Science (\inst{https://www.socialdataconsulting.com}{SDC}) & \cert{https://example.com/zertifikat} &
+\footnotesize 2019 & \footnotesize Autodesk Inventor –CAD (\inst{https://www.autodesk.com/de}{Autodesk}) & \cert{https://example.com/zertifikat} \\[0.05em] % REDUCIDO
+
+% Quinta fila - REDUCIDO ESPACIO VERTICAL
+\footnotesize 2021 & \footnotesize Hydrauliksysteme (\inst{https://www.boschrexroth.com}{Bosch Rexroth}) & \cert{https://example.com/zertifikat} &
+\footnotesize 2018 & \footnotesize Process Management and Improvement (\inst{https://www.proavance.com}{Proavance}) & \cert{https://example.com/zertifikat} \\[-0.5em] % REDUCIDO
+
+% Sexta fila - REDUCIDO ESPACIO VERTICAL
+\footnotesize 2019 & \footnotesize Calculation of Pipelines in Industrial Plants (\inst{https://www.eadic.com}{EADIC}) & \cert{https://example.com/zertifikat} & & & \\[-0.5em] % REDUCIDO
+
+% Línea para la nota - DENTRO de la tabla
+\multicolumn{6}{@{}r@{}}{\tiny \textcolor{linksoft}{\textit{Hinweise:} \tiny[Z] Zertifikat}} \\
+
+\end{tabular}

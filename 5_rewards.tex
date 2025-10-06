@@ -1,0 +1,37 @@
+% Definir longitudes para una sola columna
+\newlength{\AwardDate}
+\newlength{\AwardDesc}
+\newlength{\AwardCert}
+
+\setlength{\AwardDate}{1.4cm}   % columna fecha
+\setlength{\AwardCert}{0.4cm}   % columna certificado [Z]
+\setlength{\AwardDesc}{\dimexpr(\textwidth - \AwardDate - \AwardCert - 1.5em)\relax}
+
+\noindent
+\begin{tabular}{@{}%
+  >{\raggedleft\arraybackslash}m{\AwardDate}%
+  @{\hspace{0.4em}}%
+  >{\RaggedRight\arraybackslash}m{\AwardDesc}%
+  @{\hspace{0.4em}}%
+  >{\centering\arraybackslash}m{\AwardCert}@{}}
+
+
+% Premio 1 — Top Student
+\footnotesize 2019 & 
+\footnotesize \textbf{Bester Absolvent (Top 1 \%)} – Maschinenbau, Universidad Nacional de San Agustín, Peru. &
+\cert{https://link-carta-2019} \\[0.2em]
+
+% Premio 2 — Outstanding Thesis
+\footnotesize 2021 & 
+\footnotesize \textbf{Auszeichnung für herausragende Bachelorarbeit} – Ingenieurwissenschaften. &
+\cert{https://link-carta-2021} \\[0.2em]
+
+% Premio 3 — Triple Award Freeport
+\footnotesize 2022 & 
+\footnotesize \textbf{Innova 2022 – Dreifach Preisträger} (1. Platz Digital Transformation, Showroom \& President’s Award) – Freeport-McMoRan.  
+\emph{Machine \& Deep Learning Life Data Analysis}. &
+\cert{https://link-carta-2022} \\[0.2em]
+
+\multicolumn{3}{@{}r@{}}{\tiny \textcolor{linksoft}{\textit{Hinweis:} \tiny[Z] Zertifikat / Brief}} \\
+
+\end{tabular}

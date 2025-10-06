@@ -1,0 +1,92 @@
+
+
+% ===== Definir longitudes =====
+\newlength{\colA}
+\newlength{\colB}
+\newlength{\colC}
+\newlength{\colD}
+
+\setlength{\colA}{3.0cm}  % Fecha
+\setlength{\colD}{0.8cm}  % Columna para [i], [ii], etc.
+\setlength{\colC}{1.5cm}  % Nota final (calificación)
+\setlength{\colB}{\dimexpr\textwidth - \colA - \colC - \colD - 3em\relax} % Contenido principal
+
+% ===== TABLA =====
+\noindent
+\begin{tabular}{@{}%
+  >{\raggedleft\arraybackslash}m{\colA}      % Fecha (vertical centrado, horizontal derecha)
+  @{\hspace{1em}}%
+  >{\raggedleft\arraybackslash}m{\colD}      % [i], [ii] (vertical centrado, horizontal derecha)
+  @{\hspace{0.3em}}%
+  >{\RaggedRight\arraybackslash}m{\colB}     % Contenido (vertical centrado, horizontal izquierda)
+  @{\hspace{1em}}%
+  >{\raggedleft\arraybackslash}m{\colC}      % Nota (vertical centrado, horizontal derecha)
+@{}}
+
+
+% ---------- MSc 1 ----------
+\footnotesize 10.2025 -- 10.2027 &
+\raisebox{0.28ex}{\href{https://1drv.ms/b/c/1f587cb93711f150/EXqNaRoJEcxGg1Ssoym3f5oBPomNs0OYSGMpemtomssudg?e=iQAn2j}{\tiny[i]}} &
+\footnotesize \textbf{Master of Science – Computational Science and Engineering} &
+\footnotesize — \\[-0.15em]
+& 
+&
+\footnotesize \textbf{ \href{https://www.uni-ulm.de/en/study/study-at-ulm-university/study-programmes/course-information/course/computational-science-and-engineering-master/}{Universität Ulm, Ulm, Deutschland }}& \\[-0.15em]
+
+% ---------- MSc 2 ----------
+\footnotesize 09.2024 -- 03.2026 &
+\raisebox{0.28ex}{\href{https://1drv.ms/b/c/1f587cb93711f150/EQC2B-jFlY9Eu1x8Zm8PLtYBnmYR_lb2w23_AJ5k5wpuOA?e=jYIp3y}{\tiny[i]}} &
+\footnotesize \textbf{Master of Science – Advanced Precision Engineering} &
+\footnotesize 1,8\\[-0.25em] &  &
+\footnotesize \textbf{\href{https://www.hs-furtwangen.de/studium/studiengaenge/advanced-precision-engineering-master}{Hochschule Furtwangen, Villingen-Schwenningen, Deutschland}}& \\&
+\raisebox{1.55ex} {\href{https://1drv.ms/b/c/1f587cb93711f150/EUkky3o-A8dGrnUxgqohNXABtPG748axLzTbyJIIqouM3w?e=SdTAbK}{\tiny[ii]}} &
+\footnotesize Thesis: Fluid 4.0-konformes Framework für digitale Darstellung und graphbasierte neuronale Modellierung hydraulischer Systeme & \\[-0.5em]
+
+% ---------- Postgrad ----------
+\footnotesize 06.2021 -- 02.2022 &
+\raisebox{0.28ex}{\href{https://siucarne.sunedu.gob.pe/autoridades/informacion-solicitud?Guid=137d2700-4dc5-47dd-8ae4-1192ba5a66b9\&Dato=Z2d6Q0RveUdMTTdJTWtjK2piZ1pBVXUrUjJTV1VWNnVqUFpzR3FST2dlbz0\%3D}{\tiny[i]}} &
+\footnotesize \textbf{Postgraduiertendiplom – Maschinelles Lernen \& Deep Learning} &
+\textcolor{mygrey}{\tiny [Top 5\,\%]}   \footnotesize 19.0/20.0\\[-0.75em]& &
+\footnotesize \textbf{\href{https://dc.ucsp.edu.pe/postgrado/diplomado-machine-learning/}{Universidad Católica San Pablo, Arequipa, Peru}}& \\[-0.5em]
+
+% ---------- Bachelor ----------
+\footnotesize 03.2015 -- 12.2019 &
+\raisebox{0.28ex}{\href{https://siucarne.sunedu.gob.pe/autoridades/informacion-solicitud?Guid=f37661dd-9383-4532-8e95-53ce4a8a7fc9\&Dato=aUhGL09TekErTE51eUIvb2VKTERYbE9iVjloaUdFN05xMUVkaStPS3Q0WT0\%3D}{\tiny[i]}}&
+\footnotesize \textbf{Bachelor – Maschinenbau} &
+\textcolor{mygrey}{\tiny [Top 1\,\%]}   \footnotesize 15.2/20.0\\[-0.75em]
+& &
+\footnotesize \textbf{ \href{https://www.unsa.edu.pe/}{Universidad Nacional de San Agustín, Arequipa, Peru}} & \\[-0.25em]
+&\raisebox{0.28ex}{\href{https://1drv.ms/b/c/1f587cb93711f150/Efq_MbYwaGxKk5v9daxg2HcBgZ6ogaNsQzBStV41bFvpRw?e=FoGxN2}{\tiny[ii]}} &
+\footnotesize \textit{Anerkennung durch die Regierung von Schwaben.} & \\
+& \raisebox{0.28ex}{\href{https://1drv.ms/b/c/1f587cb93711f150/EcwlwdqOAZlAsxEgyMYivNEBw_89JX5WQIZyVk3WiAfeFA?e=4JS4rq}{\tiny[iii]}} &
+\footnotesize \textit{Auszeichnung für die beste Studienförderungsnote.} & \\
+&\raisebox{1.55ex}{\href{https://zenodo.org/records/17233982}{\tiny[iv]}} &
+\footnotesize Thesis: Design eines 350 TPH Kupferkonzentrat-Förderbandes mit automatischem hydraulischem Spannsystem und Aufnahmetrichter & \\[-0.5em]
+
+% ---------- Sekundarstufe ----------
+\footnotesize 03.2009 -- 12.2013 &
+\raisebox{0.30ex}{\href{https://1drv.ms/b/c/1f587cb93711f150/ETutcZ9SaZdJkxS0L8BvJaoBjHM5gMRmivIAAn_P8WEYPw?e=nu6XNA}{\tiny[i]}} &
+\footnotesize \textbf{Sekundarstufe}&
+\textcolor{mygrey}{\tiny [Top 5\,\%]}    \footnotesize 16.0/20.0 \\[-0.75em]
+&
+&
+\footnotesize \textbf{ \href{https://salesianos.pe/inspectoria/nuestras-obras/arequipa/}{Salesianerschule Don Bosco }}& \\[-0.15em]
+
+% ---------- Grundschule ----------
+\footnotesize 03.2003 -- 12.2008 & &
+\footnotesize \textbf{Grundschule} &
+\footnotesize 18.0/20.0  \\[-0.25em]
+& &
+\footnotesize Carlos-Gauss-Schule & \\
+
+\\[-2em]
+% ---------- Nota al pie ----------
+\multicolumn{4}{@{}r@{}}{\tiny \vspace{0.5em}
+\textcolor{linksoft}{\textit{Hinweise:} \tiny[i] Diplom-/Programmstatus ansehen.}}\\[-0.8em]
+\multicolumn{4}{@{}r@{}}{\tiny 
+\textcolor{linksoft}{\tiny Beide Masterstudiengänge: Unterrichtssprache Deutsch.}}\\
+
+
+
+
+\end{tabular}
