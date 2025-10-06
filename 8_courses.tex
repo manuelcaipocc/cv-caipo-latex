@@ -1,61 +1,85 @@
-% ===== Definición de longitudes personalizadas =====
-\newlength{\Ai}  % Fecha columna 1
-\newlength{\Bi}  % Curso columna 2  
-\newlength{\Ci}  % Certificado columna 3
-\newlength{\Aii} % Fecha columna 4
-\newlength{\Bii} % Curso columna 5
-\newlength{\Cii} % Certificado columna 6
+% ================== LONGITUDES GLOBALES ==================
+% Separadores y control de espacios
+\newlength{\ColSep}      % espacio entre columnas internas
+\newlength{\MidSep}      % espacio entre las dos mitades (entre las 2 celdas de la tabla externa)
+\newlength{\RowTight}    % compactación vertical por fila
 
-% REDUCIR MÁS LAS COLUMNAS NO ESENCIALES Y MAXIMIZAR ESPACIO PARA CURSOS
-\setlength{\Ai}{0.8cm}   % REDUCIDO: Ancho de columna fecha
-\setlength{\Ci}{0.3cm}   % REDUCIDO: Ancho de columna certificado
-\setlength{\Bi}{\dimexpr(0.5\textwidth - \Ai - \Ci - 1.5em)\relax}  % AUMENTADO: Ancho del curso
+% NUEVO: Proporciones para cada mitad
+\newlength{\LeftWidth}   % ancho total de la tabla izquierda
+\newlength{\RightWidth}  % ancho total de la tabla derecha
+
+% Anchos de columnas de la tabla IZQUIERDA (fecha, curso, certificado)
+\newlength{\Ai}   % fecha (izquierda)
+\newlength{\Bi}   % curso  (izquierda)
+\newlength{\Ci}   % cert   (izquierda)
+
+% Anchos de columnas de la tabla DERECHA (fecha, curso, certificado)
+\newlength{\Aii}  % fecha (derecha)
+\newlength{\Bii}  % curso  (derecha)
+\newlength{\Cii}  % cert   (derecha)
+
+% ================== VALORES POR DEFECTO (AJUSTA A GUSTO) ==================
+\setlength{\ColSep}{0.4em}       % separación interna entre columnas
+\setlength{\MidSep}{0.8em}       % separación entre las dos mitades
+\setlength{\RowTight}{0.1em}     % compactación vertical por fila
+
+% AQUÍ DEFINES LAS PROPORCIONES: izquierda 40%, derecha 60%
+\setlength{\LeftWidth}{0.45\textwidth}
+\setlength{\RightWidth}{\dimexpr\textwidth - \LeftWidth - \MidSep\relax}
+
+% Anchos lado izquierdo
+\setlength{\Ai}{0.9cm}
+\setlength{\Ci}{0.35cm}
+\setlength{\Bi}{\dimexpr \LeftWidth - \Ai - \Ci - 2\ColSep \relax}
+
+% Anchos lado derecho
 \setlength{\Aii}{\Ai}
-\setlength{\Cii}{\Ci} 
-\setlength{\Bii}{\Bi}
+\setlength{\Cii}{\Ci}
+\setlength{\Bii}{\dimexpr \RightWidth - \Aii - \Cii - 2\ColSep \relax}
 
-
-
-% ===== Tabla de cursos adicionales =====
+% ================== TABLA EXTERNA (1 FILA x 2 COLUMNAS) ==================
 \noindent
-\begin{tabular}{@{}%
-  >{\raggedleft\arraybackslash}m{\Ai}%
-  @{\hspace{0.3em}}%  % REDUCIDO
-  >{\RaggedRight\arraybackslash}m{\Bi}%
-  @{\hspace{0.3em}}%  % REDUCIDO
-  >{\centering\arraybackslash}m{\Ci}%
-  @{\hspace{0.6em}}%  % REDUCIDO (espacio entre mitades)
-  >{\raggedleft\arraybackslash}m{\Aii}%
-  @{\hspace{0.3em}}%  % REDUCIDO
-  >{\RaggedRight\arraybackslash}m{\Bii}%
-  @{\hspace{0.3em}}%  % REDUCIDO
-  >{\centering\arraybackslash}m{\Cii}%
-  @{}}
+\begin{tabular}{@{}p{\LeftWidth}@{\hspace{\MidSep}}p{\RightWidth}@{}}
+% ================== CELDA IZQUIERDA ==================
+\begin{minipage}[t]{\linewidth}\vspace{0pt}
+  \footnotesize
+  \begin{tabular}{@{}%
+    >{\raggedleft\arraybackslash}m{\Ai}%
+    @{\hspace{\ColSep}}%
+    >{\RaggedRight\arraybackslash}m{\Bi}%
+    @{\hspace{\ColSep}}%
+    >{\centering\arraybackslash}m{\Ci}@{}}
 
-% Primera fila - REDUCIDO ESPACIO VERTICAL
-\footnotesize 2024 & \footnotesize Deutschkurse B1, B2, C1 (\inst{https://www.vh-ulm.de/}{Ulm vhs} \& \inst{https://www.berlitz.de}{Berlitz}) & \cert{https://example.com/zertifikat} &
-\footnotesize 2020 & \footnotesize Struktur- \& Mehrphysik-Strömungsanalyse mit FEM (\inst{https://www.esss.co}{ESSS}) & \cert{https://example.com/zertifikat} \\[0.01em] % REDUCIDO
+  % -------- Filas lado IZQUIERDO --------
+  2024 & Deutschkurse B1, B2, C1 (\inst{https://www.vh-ulm.de/}{Ulm vhs} \& \inst{https://www.berlitz.de}{Berlitz}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2022 & Führung und Soft Skills (\inst{https://www.ucsp.edu.pe}{UCSP}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2022 & SQL (\inst{https://www.newhorizons.com}{New Horizons}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2021 & Python für Data Science (\inst{https://www.socialdataconsulting.com}{SDC}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2021 & Hydrauliksysteme (\inst{https://www.boschrexroth.com}{Bosch Rexroth}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2019 & Calculation of Pipelines (\inst{https://www.eadic.com}{EADIC}) & \cert{https://example.com/zertifikat} \\[\RowTight]
 
-% Segunda fila - REDUCIDO ESPACIO VERTICAL
-\footnotesize 2022 & \footnotesize Führung und Soft Skills (\inst{https://www.ucsp.edu.pe}{UCSP}) & \cert{https://example.com/zertifikat} &
-\footnotesize 2019 & \footnotesize Industrial Plant Systems (\inst{https://www.tecsup.edu.pe}{TECSUP}) & \cert{https://example.com/zertifikat} \\[0.05em] % REDUCIDO
+  \end{tabular}
+\end{minipage}
+&
+% ================== CELDA DERECHA ==================
+\begin{minipage}[t]{\linewidth}\vspace{0pt}
+  \footnotesize
+  \begin{tabular}{@{}%
+    >{\raggedleft\arraybackslash}m{\Aii}%
+    @{\hspace{\ColSep}}%
+    >{\RaggedRight\arraybackslash}m{\Bii}%
+    @{\hspace{\ColSep}}%
+    >{\centering\arraybackslash}m{\Cii}@{}}
 
-% Tercera fila - REDUCIDO ESPACIO VERTICAL
-\footnotesize 2022 & \footnotesize SQL (\inst{https://www.newhorizons.com}{New Horizons}) & \cert{https://example.com/zertifikat} &
-\footnotesize 2019 & \footnotesize Autodesk Nastran – FEM \& CFD (\inst{https://www.autodesk.com/de}{Autodesk}) & \cert{https://example.com/zertifikat} \\[0.05em] % REDUCIDO
-
-% Cuarta fila - REDUCIDO ESPACIO VERTICAL
-\footnotesize 2021 & \footnotesize Python für Data Science (\inst{https://www.socialdataconsulting.com}{SDC}) & \cert{https://example.com/zertifikat} &
-\footnotesize 2019 & \footnotesize Autodesk Inventor –CAD (\inst{https://www.autodesk.com/de}{Autodesk}) & \cert{https://example.com/zertifikat} \\[0.05em] % REDUCIDO
-
-% Quinta fila - REDUCIDO ESPACIO VERTICAL
-\footnotesize 2021 & \footnotesize Hydrauliksysteme (\inst{https://www.boschrexroth.com}{Bosch Rexroth}) & \cert{https://example.com/zertifikat} &
-\footnotesize 2018 & \footnotesize Process Management and Improvement (\inst{https://www.proavance.com}{Proavance}) & \cert{https://example.com/zertifikat} \\[-0.5em] % REDUCIDO
-
-% Sexta fila - REDUCIDO ESPACIO VERTICAL
-\footnotesize 2019 & \footnotesize Calculation of Pipelines in Industrial Plants (\inst{https://www.eadic.com}{EADIC}) & \cert{https://example.com/zertifikat} & & & \\[-0.5em] % REDUCIDO
-
-% Línea para la nota - DENTRO de la tabla
-\multicolumn{6}{@{}r@{}}{\tiny \textcolor{linksoft}{\textit{Hinweise:} \tiny[Z] Zertifikat}} \\
-
+  % -------- Filas lado DERECHO --------
+  2020 & Struktur- \& Mehrphysik-Strömungsanalyse mit FEM (\inst{https://www.esss.co}{ESSS}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2019 & Industrial Plant Systems (\inst{https://www.tecsup.edu.pe}{TECSUP}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2019 & Autodesk Nastran – FEM \& CFD (\inst{https://www.autodesk.com/de}{Autodesk}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2019 & Autodesk Inventor – CAD (\inst{https://www.autodesk.com/de}{Autodesk}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+  2018 & Process Improvement (\inst{https://www.proavance.com}{Proavance}) & \cert{https://example.com/zertifikat} \\[\RowTight]
+      &                                                           & \\[-1em]
+  \multicolumn{3}{@{}r@{}}{\tiny \textcolor{linksoft}{\textit{Hinweise:} [Z] Zertifikat}}\\
+  \end{tabular}
+\end{minipage}
+\\ % fin de la única fila de la tabla externa
 \end{tabular}

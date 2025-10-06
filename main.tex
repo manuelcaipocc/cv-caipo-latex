@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[top=1.5cm, bottom=0cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=1.5cm, bottom=0cm, left=1.5cm, right=2cm]{geometry}
 
 \usepackage{graphicx}
 % \usepackage{url}
@@ -82,12 +82,6 @@
 ]{expblock}
 
 
-% --- Anchos acoplados a \textwidth ---
-\newlength{\datecol}
-\setlength{\datecol}{2.4cm}   % ancho de la columna de fechas (ajústalo si quieres)
-
-\newlength{\colgap}
-\setlength{\colgap}{6mm}      % separación visual entre fecha y contenido
 
 \newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}} % texto pegado izquierda
 \newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}} 
@@ -272,7 +266,7 @@
 
 \resheading{BERUFSERFAHRUNG}
 
-\vspace{-1em}
+\vspace{-0.25em}
 % \vspace{2em}
 \noindent
 \input{2_experience}

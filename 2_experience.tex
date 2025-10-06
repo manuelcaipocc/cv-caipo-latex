@@ -1,3 +1,11 @@
+% --- Anchos acoplados a \textwidth ---
+\newlength{\datecol}
+\setlength{\datecol}{2.7cm}   % ancho de la columna de fechas (ajústalo si quieres)
+
+\newlength{\colgap}
+\setlength{\colgap}{6mm}      % separación visual entre fecha y contenido
+
+
 \begin{tabular}{@{}>{\raggedleft\arraybackslash}m{\datecol} @{\hspace{\colgap}} p{\dimexpr\textwidth-\datecol-\colgap\relax}@{}}
 
 
@@ -6,19 +14,19 @@
 \begin{minipage}[t]{\linewidth}\vspace{0pt}
 \begin{expblock}
   \footnotesize
-  \setlength{\parindent}{0pt}\setlength{\parskip}{0pt} % texto más pegado
+  \setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
   \textbf{\href{https://www.boschrexroth.com/en/dc/}{Bosch Rexroth, Ulm, Deutschland}}\\[-0.1em]
-  % \textbf{Bosch Rexroth, Ulm, Deutschland}\\[-0.1em]
   \textbf{SSD3 – Data Scientist Werkstudent}\\[-1em]
-  \begin{itemize}[nosep,leftmargin=1em] % listas más compactas
-    \item Aufbau und Orchestrierung von ETL- und Datenpipelines zur Verarbeitung hochfrequenter Zeitreihendaten (Relationalen \& NoSQL-Datenbanken).
-    \item Integration von Message-Broker-Systemen (Solace, MQTT) und Optimierung des industriellen Datenflusses für skalierbare Anwendungen.
-    \item Entwicklung eines Überwachungssystems für Hydraulikanlagen mit Einsatz von ML- \& DL-Methoden zur Erkennung anomaler Betriebszustände und zur Vorhersage der Restlebensdauer (RUL).
-    \item Sicherstellung von Transparenz \& Akzeptanz durch den Einsatz erklärbarer KI-Ansätze in industriellen Prognosemodellen.
+  \begin{itemize}[nosep,leftmargin=1em]
+    \item Aufbau und Orchestrierung von ETL-Pipelines für hochfrequente Zeitreihendaten (SQL \& NoSQL).
+    \item Integration von Message-Brokern (Solace, MQTT) zur Optimierung industrieller Datenflüsse.
+    \item Entwicklung von ML-/DL-basierten Prognosemodellen zur Anomalieerkennung \& RUL-Vorhersage in Hydraulikanlagen.
+    \item Implementierung erklärbarer KI-Methoden zur Steigerung von Transparenz \& Akzeptanz.
   \end{itemize}
 \end{expblock}
 \end{minipage}
-\\[-0.2em] % menos espacio entre filas
+\\[-0.2em]
+
 
 % ===== Freeport =====
 \datecell[-1.6ex]{\small 04.2021 – 07.2023} &
