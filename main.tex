@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[top=1.5cm, bottom=1cm, left=1.5cm, right=2cm]{geometry}
+\usepackage[top=1.5cm, bottom=0.5cm, left=1.5cm, right=2cm]{geometry}
 
 \usepackage{graphicx}
 % \usepackage{url}
@@ -62,6 +62,21 @@
   urlcolor   = linksoft,
   citecolor  = linksoft,
 }
+
+% \hypersetup{
+%   colorlinks = true,
+%   linkcolor  = linksoft,
+%   urlcolor   = linksoft,
+%   citecolor  = linksoft,
+%   pdftitle={Manuel Caipo - CV},
+%   pdfauthor={Manuel Caipo},
+%   pdfsubject={Curriculum Vitae},
+%   unicode=true,
+%   bookmarksopen=false,
+%   pdfstartview=FitH,
+%   pdfpagemode=UseNone,
+%   breaklinks=true
+% }
 
 \usepackage{fancyhdr}
 \usepackage{lastpage} % solo si quieres “Página X de Y”
@@ -246,8 +261,11 @@
 % ===== Macro para instituciones con enlace =====
 \newcommand{\inst}[2]{\href{#1}{#2}}
 % --- Aplica en todas las páginas (o usa shipout/firstpage si solo la primera) ---
-\AddToHook{shipout/foreground}{\FancyTopbar}
-\AddToHook{shipout/foreground}{\FancyQRBottom}
+% \AddToHook{shipout/foreground}{\FancyTopbar}
+% \AddToHook{shipout/foreground}{\FancyQRBottom}
+
+\AddToHook{shipout/background}{\FancyTopbar}
+\AddToHook{shipout/background}{\FancyQRBottom}
 
 \makeatother
 % ----------------------------------------------------------------
@@ -256,7 +274,7 @@
 
 \input{0_personal_data}
 
-\vspace{-0.8em}
+\vspace{-0.6em}
 
 \input{1_profile_summary}
 

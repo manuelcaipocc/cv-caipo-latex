@@ -9,13 +9,6 @@
 \definecolor{symbolcolor}{HTML}{000066}
 \definecolor{linkcolor}{HTML}{000066}
 
-% Link setup
-\hypersetup{
-  colorlinks=true,
-  urlcolor=linkcolor,
-  linkcolor=linkcolor
-}
-
 % Icon aliases
 \newcommand{\mailSymbol}{\faAt}
 \newcommand{\locationSymbol}{\faMapMarker}
@@ -31,10 +24,15 @@
 
 
 % Social formats
+% \newcommand{\socialtext}[2]{%
+%   \begin{tabular}[t]{@{}ll@{}}%
+%     \textcolor{symbolcolor}{#1}\hspace{0.6em} & \begin{tabular}[t]{@{}l@{}}#2\end{tabular}%
+%   \end{tabular}\hspace{1em}%
+% }
 \newcommand{\socialtext}[2]{%
-  \begin{tabular}[t]{@{}ll@{}}%
-    \textcolor{symbolcolor}{#1}\hspace{0.6em} & \begin{tabular}[t]{@{}l@{}}#2\end{tabular}%
-  \end{tabular}\hspace{1em}%
+  \mbox{%
+    \textcolor{symbolcolor}{#1}\hspace{0.3em}#2%
+  }\hspace{1em}%
 }
 
 
