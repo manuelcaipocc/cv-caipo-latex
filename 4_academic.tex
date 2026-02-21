@@ -6,15 +6,15 @@
 \newlength{\colC}
 \newlength{\colD}
 
-\setlength{\colA}{3.0cm}  % Fecha
-\setlength{\colD}{0.8cm}  % Columna para [i], [ii], etc.
+\setlength{\colA}{2.4cm}  % Fecha
+\setlength{\colD}{0.3cm}  % Columna para [i], [ii], etc.
 \setlength{\colC}{1.5cm}  % Nota final (calificación)
 \setlength{\colB}{\dimexpr\textwidth - \colA - \colC - \colD - 3em\relax} % Contenido principal
 
 % ===== TABLA =====
 \noindent
 \begin{tabular}{@{}%
-  >{\raggedleft\arraybackslash}m{\colA}      % Fecha (vertical centrado, horizontal derecha)
+  >{\centering\arraybackslash}m{\colA}      % Fecha (vertical centrado, horizontal derecha)
   @{\hspace{1em}}%
   >{\raggedleft\arraybackslash}m{\colD}      % [i], [ii] (vertical centrado, horizontal derecha)
   @{\hspace{0.3em}}%
@@ -24,21 +24,21 @@
 @{}}
 
 
-% ---------- MSc 1 ----------
-\footnotesize 10.2025 -- 10.2027 &
+%---------- MSc 1 ----------
+\footnotesize 10.2025 -- Heute &
 \raisebox{0.28ex}{\href{https://manuelcaipocc.github.io/cv-caipo-latex/cv_links/uni_ulm_master/Certificate_of_semesters_of_enrolment.pdf}{\tiny[i]}} &
 \footnotesize \textbf{Master of Science – Computational Science and Engineering} &
 \footnotesize — \\[-0.15em]
 
-% NUEVA LÍNEA: berufsbegleitend debajo del título
-& & \footnotesize \textit{Berufsbegleitend} & \\[-0.15em]
+& & \footnotesize \textit{Focus: Numerical Optimization, High-Performance Computing, Theoretical Computer Science} & \\[-0.15em]
+
 
 & & 
 \footnotesize \textbf{\href{https://www.uni-ulm.de/en/study/study-at-ulm-university/study-programmes/course-information/course/computational-science-and-engineering-master/}{Universität Ulm, Ulm, Deutschland}} & \\[-0.15em]
 
 
 % ---------- MSc 2 ----------
-\footnotesize 09.2024 -- 03.2026 &
+\footnotesize 09.2024 -- 02.2026 &
 \raisebox{0.28ex}{\href{https://manuelcaipocc.github.io/cv-caipo-latex/cv_links/hfu_master/HFU_grades.pdf}{\tiny[i]}} &
 \footnotesize \textbf{Master of Science – Advanced Precision Engineering} &
 \footnotesize 1,8\\[-0.15em] &  &
@@ -67,23 +67,23 @@
 &\raisebox{1.55ex}{\href{https://zenodo.org/records/17233982}{\tiny[iv]}} &
 \footnotesize Thesis: Design eines 350 TPH Kupferkonzentrat-Förderbandes mit automatischem hydraulischem Spannsystem und Aufnahmetrichter & \\[-0.5em]
 
-% ---------- Sekundarstufe ----------
-\footnotesize 03.2009 -- 12.2013 &
-\raisebox{0.30ex}{\href{https://manuelcaipocc.github.io/cv-caipo-latex/cv_links/school_sekundar/sekundarstufe_HZB.pdf}{\tiny[i]}} &
-\footnotesize \textbf{Sekundarstufe}&
-\textcolor{mygrey}{\tiny [Top 5\,\%]}    \footnotesize 16.0/20.0 \\[-0.7em]
-&
-&
-\footnotesize \textbf{ \href{https://salesianos.pe/inspectoria/nuestras-obras/arequipa/}{Salesianerschule Don Bosco }}& \\[-0.15em]
+% % ---------- Sekundarstufe ----------
+% \footnotesize 03.2009 -- 12.2013 &
+% \raisebox{0.30ex}{\href{https://manuelcaipocc.github.io/cv-caipo-latex/cv_links/school_sekundar/sekundarstufe_HZB.pdf}{\tiny[i]}} &
+% \footnotesize \textbf{Sekundarstufe}&
+% \textcolor{mygrey}{\tiny [Top 5\,\%]}    \footnotesize 16.0/20.0 \\[-0.7em]
+% &
+% &
+% \footnotesize \textbf{ \href{https://salesianos.pe/inspectoria/nuestras-obras/arequipa/}{Salesianerschule Don Bosco }}& \\[-0.15em]
 
-% ---------- Grundschule ----------
-\footnotesize 03.2003 -- 12.2008 & &
-\footnotesize \textbf{Grundschule} &
-\footnotesize 18.0/20.0  \\[-0.2em]
-& &
-\footnotesize Charles-Gauss-Schule & \\
+% % ---------- Grundschule ----------
+% \footnotesize 03.2003 -- 12.2008 & &
+% \footnotesize \textbf{Grundschule} &
+% \footnotesize 18.0/20.0  \\[-0.2em]
+% & &
+% \footnotesize Charles-Gauss-Schule & \\
 
-\\[-2em]
+\\[-1em]
 % ---------- Nota al pie ----------
 \multicolumn{4}{@{}r@{}}{\tiny \vspace{0.5em}
 \textcolor{linksoft}{\textit{Hinweise:} \tiny[i] Diplom-/Programmstatus ansehen.}}\\[-0.2em]

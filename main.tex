@@ -163,6 +163,8 @@
 
 % --- Definición de resheading ---
 \newcommand{\resheading}[1]{%
+  \phantomsection % Crea el ancla para el link sin saltar de página
+  \addcontentsline{toc}{section}{#1} % Agrega el título al árbol del PDF
   \begingroup
   \setlength{\fboxsep}{6pt}%
   \noindent\colorbox{background}{%
